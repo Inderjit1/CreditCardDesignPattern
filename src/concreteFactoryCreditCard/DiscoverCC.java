@@ -1,17 +1,16 @@
-package individualProject;
-
-import Interfaces.CreditCard;
+package concreteFactoryCreditCard;
 
 import java.util.regex.Pattern;
 
-public class AmExCC implements CreditCard{
-	
+import Interfaces.CreditCard;
+
+public class DiscoverCC implements CreditCard{
 	String cardNumber;
 	String cardName;
 	String date; 
 	
-	public AmExCC() {};
-	public AmExCC(String cardNumber, String cardName, String date ) {
+	public DiscoverCC() {};
+	public DiscoverCC(String cardNumber, String cardName, String date ) {
 		this.cardNumber = cardNumber;
 		this.cardName = cardName;
 		this.date = date;
@@ -35,17 +34,18 @@ public class AmExCC implements CreditCard{
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
+
 	public boolean check(String cardNumber, String cardName, String date ) {
+		String regex = "^[6][0][1][1]\\d{12}$";
 		
-			// Amex Requirements: First digit is a 3 and second digit a 4 or 7. Length is 15 digits.
-			String regex = "^[3][4]\\d{13}|[3][7]\\d{13}$";
-			if(Pattern.matches(regex, cardNumber)) {
-				return true;
-			}
-			
-			return false;
-			
+		if(Pattern.matches(regex, cardNumber)) {
+			return true;
 		}
+		
+		return false;
+		
+	}
+	
+	
 
 }

@@ -1,21 +1,25 @@
-package individualProject;
+package concreteFactoryCreditCard;
 
 import java.util.regex.Pattern;
 
 import Interfaces.CreditCard;
 
-public class DiscoverCC implements CreditCard{
+public class MasterCC implements CreditCard{
+	
 	String cardNumber;
 	String cardName;
 	String date; 
 	
-	public DiscoverCC() {};
-	public DiscoverCC(String cardNumber, String cardName, String date ) {
+	public MasterCC() {};
+
+	public MasterCC(String cardNumber, String cardName, String date ) {
 		this.cardNumber = cardNumber;
 		this.cardName = cardName;
 		this.date = date;
 	};
-	
+//
+//	
+//
 	public String getCardNumber() {
 		return cardNumber;
 	}
@@ -34,18 +38,19 @@ public class DiscoverCC implements CreditCard{
 	public void setDate(String date) {
 		this.date = date;
 	}
-
+	
 	public boolean check(String cardNumber, String cardName, String date ) {
-		String regex = "^[6][0][1][1]\\d{12}$";
+//			int firstDigit = Integer.parseInt(String.valueOf(cardNumber.charAt(0)));
+//			int secondDigit = Integer.parseInt(String.valueOf(cardNumber.charAt(1)));
+//			int cardLength = cardNumber.length();
 		
-		if(Pattern.matches(regex, cardNumber)) {
-			return true;
+			String regex = "^[5][1-5]\\d{14}$";
+			if(Pattern.matches(regex, cardNumber)) {
+				return true;
+			}
+			
+			return false;
+			
 		}
-		
-		return false;
-		
-	}
-	
-	
 
 }
