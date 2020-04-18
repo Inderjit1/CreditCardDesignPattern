@@ -3,10 +3,10 @@ package factoryCreator;
 import java.util.regex.Pattern;
 
 import Interfaces.CreditCard;
-import individualProject.AmExCC;
-import individualProject.DiscoverCC;
-import individualProject.MasterCC;
-import individualProject.VisaCC;
+import concreteFactoryCreditCard.AmExCC;
+import concreteFactoryCreditCard.DiscoverCC;
+import concreteFactoryCreditCard.MasterCC;
+import concreteFactoryCreditCard.VisaCC;
 
 public class CreditCardType {
 	public String getCardNumber() {

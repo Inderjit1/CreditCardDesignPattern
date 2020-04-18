@@ -16,7 +16,7 @@ import org.w3c.dom.NodeList;
 import Interfaces.CreditCard;
 import Interfaces.FileReaderStrategy;
 import factoryCreator.CreditCardType;
-import individualProject.FileOutput;
+import concreteFactoryCreditCard.FileOutput;
 
 
 public class XMLReader implements FileReaderStrategy<ArrayList<FileOutput>> {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import Interfaces.CreditCard;
 import Interfaces.FileReaderStrategy;
 import factoryCreator.CreditCardType;
-import individualProject.FileOutput;
+import concreteFactoryCreditCard.FileOutput;
 
 public class CSVReader implements FileReaderStrategy<ArrayList<FileOutput>> {
 

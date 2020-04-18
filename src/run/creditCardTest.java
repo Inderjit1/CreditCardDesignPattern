@@ -2,7 +2,7 @@ package run;
 
 import Context.Context;
 import factoryCreator.CreditCardType;
-import individualProject.FileHandler;
+//import individualProject.FileHandler;
 
 public class creditCardTest {
 
@@ -15,7 +15,7 @@ public class creditCardTest {
 		//String fileInput = "C:\\Users\\inder\\Documents\\CMPE 202 - Software Systems Engineering\\SampleXML.xml";
 		String fileOutput = "";
 		CreditCardType cc = new CreditCardType();
-		FileHandler fh = new FileHandler();
+		//FileHandler fh = new FileHandler();
 		//fh.CSVReader(cc);;
 		//fh.JSONReader(cc, fileInput, fileOutput);
 		//fh.XMLReader(cc, fileInput, fileOutput);
